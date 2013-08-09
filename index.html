@@ -1,17 +1,100 @@
 <html>
     <head>
+        <style type="text/css">
+            #title {
+                font: 35px papyrus; 
+                color: darkblue;
+                float: left;
+            }
+            #heading {
+                font: 15px arial;
+                color: darkblue;
+                width: 60%;
+                padding: 5px 0px 45px 20px;
+                float: left;
+
+            }
+
+            #container {
+                width: 60%;
+                background: lightgrey;
+                border: 3px double black;
+                border-radius: 10px 10px 10px 10px;
+                padding: 10px;
+                margin-left: 20%;
+                font: 17px arial white;
+                float: left;}
+            #search {
+                background: ghostwhite;
+                width: 96%;
+                border: 2px double black;
+                border-radius: 10px;
+                padding: 2%;
+            }
+            #search_title {
+                font: 30px;
+                padding-bottom: 20px;}
+            #results{
+                padding: 2%;
+                background: ghostwhite;
+                border: 2px double black;
+                border-radius: 10px;
+                margin: 15px 0 0 0;
+                float:left;
+            }  
+            .result_image img { 
+                width: 180px;
+                border: 3px transparent solid;
+                border-radius: 20px;
+                margin: 4px;
+                float: left;
+                clear: left;
+            }
+            .title {
+                float: left; 
+                width: 200px;
+            }
+            .checkbox_container {
+                float: right;
+                clear: left;}
+                .description {
+                    float: left;
+                
+
+            }
+            .result{
+                float: left;
+                min-height: 20px;
+            }
+        </style>
+        <title>The AmAzInG Wallpaper Grabber!</title>
     </head>
     <body>
+        <div id="title">The AmAzInG Wallpaper Grabber</div>
+        <div id="heading">Hey there! Have you ever wanted a bunch of random shitty wallpapers zipped up based off some radonm Flickr search? Well now you can have it! Just put in your search term and how many images you want returned and we'll do the rest!</div>
         <div id="container">
             <div id="search">
-                <input class="image_number" type="text" title="How many images should be fetched?">
-                <input class="image_name" type="text" title="What would you like images of?">
+                <div id="search_title">Start Your Search</div>
+                <div class="search_form_title">How many images should be fetched?</div>
+                <form id="image_number_form">
+                    <input class="image_number" type="text" title="How many images should be fetched?">
+                    <input class="submit" type="submit">
+                </form>
+                <div class="search_form_title"> What would you like images of?</div>
+                <form id="image_title_form">
+                    <input class="image_name" type="text" title="What would you like images of?">
+                    <input class="submit" type="submit"> 
+                </form>
             </div>
             <div id="results">
                 <div class="result">
                     <div class="title">
                         Holy Shit! Look at this Cat!
                     </div>
+                    <div class="checkbox_container">
+                    <input class="checkbox" type="checkbox">
+                    <div class="checkbox_help_text">Include this image?</div>
+                </div>
                     <div class="result_image">
                         <img src="http://eofdreams.com/data_images/dreams/cat/cat-07.jpg"/>
                     </div>
@@ -20,6 +103,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </body>
     </html>
 
